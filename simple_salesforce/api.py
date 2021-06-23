@@ -250,6 +250,8 @@ class Salesforce:
         # (https://github.com/heroku/simple-salesforce/issues/60)
         #if name.startswith('__'):
         #    return super().__getattr__(name)
+        logging.info(name)
+        logging.info(type(name))
         if name.startswith('__'):
             return super(Salesforce, self).__getattr__(name)
 
